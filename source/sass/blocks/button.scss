@@ -1,0 +1,12 @@
+.button {
+  display: inline-block;
+  color: $basic-white;
+  background-color: $basic-light-red;
+  font-family: $font-medium;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 10px;
+  line-height: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+}

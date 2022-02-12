@@ -1,0 +1,230 @@
+.main-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $desktop-width;
+  box-sizing: border-box;
+  max-width: $desktop-width;
+  margin: 0 auto;
+
+  &--no-js {
+    flex-wrap: wrap;
+    padding: 18px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 39px 0;
+  }
+}
+
+.main-nav__logo-link {
+  padding: 0 0 0 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-right: 575px;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  background-color: $basic-light-red;
+  width: 50px;
+  height: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--no-js .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__toggle-item {
+  position: absolute;
+  background-color: $menu-grey;
+  width: 22.5px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: 0.5s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22.5px;
+    height: 1px;
+    background-color: $menu-grey;
+  }
+
+  &::before {
+    top: -5.25px;
+  }
+
+  &::after {
+    top: 5.25px;
+  }
+}
+
+.main-nav__toggle-item--close-menu {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: rotate(45deg) translateY(-50%) translateX(-50%);
+  cursor: pointer;
+  width: 22px;
+  height: 1px;
+  border: none;
+  background-color: $close-menu-grey;
+  transition: 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 1px;
+    background-color: $close-menu-grey;
+    transform: rotate(90deg);
+    transition: 0.5s;
+  }
+}
+
+.main-nav__menu {
+  display: none;
+  min-height: 568px;
+  max-width: 320px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 134px 0 0 0;
+  background-color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: static;
+    min-height: auto;
+    padding: 0;
+  }
+}
+
+.main-nav__menu--show-menu {
+  display: block;
+}
+
+.main-nav--no-js .main-nav__menu {
+  display: block;
+  position: static;
+  padding: 0;
+}
+
+.main-nav__list {
+  @include list-zeroing;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+}
+
+.main-nav__item {
+  box-sizing: border-box;
+  padding: 0 25px 0 16px;
+  background-color: $menu-grey-2;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    background-color: $basic-white;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+.main-nav__item-link {
+  position: relative;
+  font-family: $font-bold;
+  font-size: 20px;
+  line-height: 140%;
+  display: inline-block;
+  width: 100%;
+  color: $pop-up-grey;
+  padding: 17px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../../img/icon.svg") 50% 50% no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    font-family: $font-medium;
+    font-size: 14px;
+    line-height: 17px;
+    color: $basic-black;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.main-nav__tel-link {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: $basic-black;
+    white-space: nowrap;
+    padding-left: 28px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 17.5px;
+      height: 26px;
+      background: url("../img/phone.svg") 50% 50% no-repeat;
+    }
+  }
+}
