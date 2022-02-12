@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="" />
     <title>Way</title>
   </head>
   <body class="page-body">
     <header class="page-header">
       <h1 class="visually-hidden">Сайт путешевствий по европе Way</h1>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--no-js">
         <a class="main-nav__logo-link logo-link">
-          <img
-            class="logo-link__image"
-            src="img/logo.svg"
-            alt="Логотип Way"
-            width="44"
-            height="17"
-          />
+          <picture>
+            <source media="(min-width: 1170px)" srcset="img/logo-desktop.svg" />
+            <img
+              class="logo-link__image"
+              src="img/logo.svg"
+              alt="Логотип Way"
+            />
+          </picture>
         </a>
         <div class="main-nav__toggle">
           <span class="main-nav__toggle-item"></span>
@@ -27,25 +29,32 @@
         <div class="main-nav__menu">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__item-link">О путешествии</a>
+              <a class="main-nav__item-link" href="#">О путешествии</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="#">Цены</a>
             </li>
           </ul>
         </div>
+        <a class="main-nav__tel-link" href="tel:+749978468446"
+          >+7 (499) -784-684-46</a
+        >
       </nav>
     </header>
-    <main class="page-main">
+<main class="page-main">
       <section class="promo">
-        <h2 class="promo__title section-title">Путешествие по Европе</h2>
+        <div class="promo__background-wrapper">
+        <h2 class="promo__title">Путешествие по Европе</h2>
+      </div>
+      <div class="promo__content-wrapper">
         <p class="promo__text">
           В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море,
           горы, а также потрясающая красота природы.
         </p>
         <a class="promo__button button" href="#">Cмотреть тур</a>
+      </div>
       </section>
-      <section class="countries">
+      <!-- <section class="countries">
         <h2 class="countries__title section-title">Места посещения</h2>
         <p class="countries__description">
           Вы можете выбрать полный тур или частичный, с посещением первых 3 мест
@@ -423,6 +432,7 @@
           корпоративный дух, а также являются оличным времяпрепровождением
         </p>
       </section>
-    </footer>
+    </footer>  -->
+    <script src="js/menu.js"></script>
   </body>
 </html>
