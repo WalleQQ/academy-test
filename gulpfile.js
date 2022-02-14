@@ -57,7 +57,7 @@ export const styles = () => {
 
 // // WebP
 
-// const createWebp = () => {
+// export const createWebp = () => {
 //   return gulp
 //     .src("source/img/**/*.{png,jpg}")
 //     .pipe(
@@ -65,7 +65,7 @@ export const styles = () => {
 //         webp: {},
 //       })
 //     )
-//     .pipe(gulp.dest("build/img"));
+//     .pipe(gulp.dest("source/img"));
 // };
 
 // SVG
