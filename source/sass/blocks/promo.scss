@@ -1,5 +1,24 @@
 .promo {
   margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 235px;
+    top: 0;
+    background-image: image-set(
+      url("../img/promo-background.jpg") 1x,
+      url("../img/promo-background@2x.jpg") 2x,
+      url("../img/promo-background.webp") 1x,
+      url("../img/promo-background@2x.webp") 2x
+    );
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   @media (min-width: $tablet-width) {
     background-image: image-set(
@@ -15,50 +34,43 @@
     flex-direction: column;
     align-items: center;
     padding: 60px 0 83px 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 185px 58px 296px 0;
+  }
+}
+
+.promo__wrapper {
+  max-width: $desktop-width;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
     align-items: flex-end;
   }
 }
 
-.promo__background-wrapper {
-  background-image: image-set(
-    url("../img/promo-background.jpg") 1x,
-    url("../img/promo-background@2x.jpg") 2x,
-    url("../img/promo-background.webp") 1x,
-    url("../img/promo-background@2x.webp") 2x
-  );
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 234px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 21px;
-  padding: 10px 0;
-
-  @media (min-width: $tablet-width) {
-    background: none;
-    margin: 0;
-    padding: 0;
-    min-height: auto;
-    display: block;
-  }
-}
-
 .promo__title {
-  margin: 0;
+  margin: 0 0 20px 0;
   font-family: $font-bold;
   font-size: 24px;
   line-height: 150%;
   color: $basic-white;
   text-align: center;
   max-width: 232px;
+  padding: 81px 10px;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
     max-width: 412px;
     font-size: 30px;
     line-height: 150%;
@@ -73,17 +85,18 @@
 }
 
 .promo__content-wrapper {
-  padding: 0 16px;
+  padding: 0 16px 80px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 412px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
+    align-items: flex-start;
   }
 }
 
@@ -98,7 +111,6 @@
     font-size: 16px;
     line-height: 170%;
     color: $basic-white;
-    max-width: 412px;
   }
 
   @media (min-width: $desktop-width) {

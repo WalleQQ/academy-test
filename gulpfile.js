@@ -44,7 +44,7 @@ export const styles = () => {
 
 // Images
 
-// const optimizeImages = () => {
+// export const optimizeImages = () => {
 //   return gulp
 //     .src("source/img/**/*.{png,jpg}")
 //     .pipe(squoosh())
@@ -55,18 +55,18 @@ export const styles = () => {
 //   return gulp.src("source/img/**/*.{png,jpg}").pipe(gulp.dest("build/img"));
 // };
 
-// // WebP
+// WebP
 
-// export const createWebp = () => {
-//   return gulp
-//     .src("source/img/**/*.{png,jpg}")
-//     .pipe(
-//       squoosh({
-//         webp: {},
-//       })
-//     )
-//     .pipe(gulp.dest("source/img"));
-// };
+export const createWebp = () => {
+  return gulp
+    .src("source/img/**/*.{png,jpg}")
+    .pipe(
+      squoosh({
+        webp: {},
+      })
+    )
+    .pipe(gulp.dest("source/img"));
+};
 
 // SVG
 
