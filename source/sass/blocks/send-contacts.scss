@@ -1,0 +1,46 @@
+.send-contacts__title {
+  margin: 0;
+  font-family: $font-bold;
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+  color: $basic-black;
+}
+
+.send-contacts__text {
+  margin: 0;
+  text-align: center;
+  color: $basic-black;
+}
+
+.send-contacts__input {
+  position: relative;
+  padding: 16px 15px 15px 26px;
+  align-self: stretch;
+  border: 1px solid $basic-extra-light-grey;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $basic-black;
+  }
+}
+
+.send-contacts__button {
+  font-size: 10px;
+  line-height: 12px;
+  padding: 19px 100px;
+  width: 288px;
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 84px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 18px 39px;
+    width: 176px;
+  }
+}

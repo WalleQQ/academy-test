@@ -7,4 +7,8 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/countries-background.svg") 50% 66% no-repeat;
+  }
 }

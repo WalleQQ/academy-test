@@ -593,15 +593,19 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="price">
-        <h2 class="price__title section-title">Цены</h2>
-        <p class="price__description">
-          Специально для Вас мы разработали 2 пакета цен с разными условиями,
-          отталкиваясь от Ваших потребностей и возможностей. Выберите для себя
-          лучший вариант отпуска и отдохните на все 100%!
-        </p>
-        <p class="price__call-text">Свяжитесь с нами</p>
-        <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+      <section class="price">
+        <div class="price__content-wrapper">
+          <h2 class="price__title section-title">Цены</h2>
+          <p class="price__description">
+            Специально для Вас мы разработали 2 пакета цен с разными условиями,
+            отталкиваясь от Ваших потребностей и возможностей. Выберите для себя
+            лучший вариант отпуска и отдохните на все 100%!
+          </p>
+          <p class="price__call-text">Свяжитесь с нами</p>
+          <a class="price__tel" href="tel:+749978468446"
+            >+7 (499) -784-684-46</a
+          >
+        </div>
         <ul class="price__program-list">
           <li class="price__program-item">
             <h3 class="price__program-item-heading">Комплексный</h3>
@@ -627,30 +631,52 @@
               купить тур сейчас
             </button>
           </li>
-          <li class="price__program-item">
-            <h3 class="price__program-item-heading">Экономный</h3>
-            <p class="price__program-item-price">$1399</p>
-            <p class="price__program-item-text">
+          <li class="price__program-item price__program-item--econom">
+            <h3
+              class="price__program-item-heading price__program-item-heading--econom"
+            >
+              Экономный
+            </h3>
+            <p
+              class="price__program-item-price price__program-item-price--econom"
+            >
+              $1399
+            </p>
+            <p
+              class="price__program-item-text price__program-item-text--econom"
+            >
               Ознакомьтесь с перечнем того, что входит в данный пакет
             </p>
             <ul class="price__program-item-description-list">
-              <li class="price__program-item-description-item">
+              <li
+                class="price__program-item-description-item price__program-item-description-item--econom"
+              >
                 Разработанный маршрут с гидом группы
               </li>
-              <li class="price__program-item-description-item">
+              <li
+                class="price__program-item-description-item price__program-item-description-item--econom"
+              >
                 Перелет и трансфер
               </li>
-              <li class="price__program-item-description-item">
+              <li
+                class="price__program-item-description-item price__program-item-description-item--econom"
+              >
                 Проживание в хостелах при отелях
               </li>
-              <li class="price__program-item-description-item">
+              <li
+                class="price__program-item-description-item price__program-item-description-item--econom"
+              >
                 Только завтраки в отелях
               </li>
-              <li class="price__program-item-description-item">
+              <li
+                class="price__program-item-description-item price__program-item-description-item--econom"
+              >
                 Экскурсии по удивительно красивым местам Европы
               </li>
             </ul>
-            <button class="price__program-item-button button">
+            <button
+              class="price__program-item-button button price__program-item-description-item--econom"
+            >
               купить тур сейчас
             </button>
           </li>
@@ -662,31 +688,33 @@
           <p class="send-contacts__text">
             Оставьте свой номер или e-mail и мы свяжемся с Вами
           </p>
-          <label class="visually-hidden" for="tel"
-            >Введите номер телефона</label
-          >
-          <label class="visually-hidden" for="email">Введите email</label>
-          <input
-            class="send-contacts__input"
-            type="tel"
-            name="tel"
-            id="tel"
-            placeholder="+7 Введите 10 цифр номера"
-          />
-          <input
-            class="send-contacts__input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="E-mail"
-          />
+          <div class="send-contacts__input-wrapper">
+            <label class=".send-contacts__label visually-hidden" for="tel"
+              >Введите номер телефона</label
+            >
+            <input
+              class="send-contacts__input send-contacts__input--tel"
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="+7 Введите 10 цифр номера"
+            />
+            <label class="visually-hidden" for="email">Введите email</label>
+            <input
+              class="send-contacts__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+          </div>
           <input
             class="send-contacts__button button"
             type="submit"
             value="Отправить"
           />
         </form>
-      </section> -->
+      </section>
     </main>
     <footer class="page-footer">
       <section class="next-trips">

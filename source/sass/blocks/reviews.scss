@@ -2,9 +2,11 @@
   position: relative;
   margin: 0 auto;
   max-width: $desktop-width;
+  padding-bottom: 111px;
 
   @media (min-width: $desktop-width) {
     width: 100%;
+    padding: 0;
   }
 }
 

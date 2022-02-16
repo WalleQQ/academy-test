@@ -1,0 +1,112 @@
+.questions {
+  background-color: $menu-grey-2;
+  padding: 50px 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 54px;
+    background-color: inherit;
+    background-image: image-set(
+      url("../img/send-contacts-background.jpg") 1x,
+      url("../img/send-contacts-background@2x.jpg") 2x,
+      url("../img/send-contacts-background.webp") 1x,
+      url("../img/send-contacts-background@2x.webp") 2x
+    );
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    min-width: $desktop-width;
+    width: $desktop-width;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 844px;
+    height: 455px;
+    background-image: image-set(
+      url("../img/send-contact-background-desktop.jpg") 1x,
+      url("../img/send-contact-background-desktop@2x.jpg") 2x,
+      url("../img/send-contact-background-desktop.webp") 1x,
+      url("../img/send-contact-background-desktop@2x.webp") 2x
+    );
+    background-position: 0 50%;
+    background-size: contain;
+  }
+}
+
+.questions__form {
+  margin: 0 auto;
+  max-width: $desktop-width;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 656px;
+    box-sizing: border-box;
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+  }
+}
+
+.questions__form .send-contacts__input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+
+.questions__form .send-contacts__title {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 11px;
+  }
+}
+
+.questions__form .send-contacts__text {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.questions__form .send-contacts__input {
+  box-sizing: border-box;
+  width: 288px;
+
+  @media (min-width: $tablet-width) {
+    width: 269px;
+  }
+}
+
+.questions__form .send-contacts__button {
+  margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
+  }
+}
