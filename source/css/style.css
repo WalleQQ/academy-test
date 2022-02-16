@@ -1009,6 +1009,7 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  cursor: pointer;
   position: relative;
   padding: 0 16px 10px;
   display: flex;
@@ -1361,6 +1362,8 @@ img {
   position: relative;
   color: #fe7865;
   margin: 0 0 40px 0;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 @media (min-width: 1170px) {
   .price__tel {
@@ -1658,6 +1661,224 @@ img {
     line-height: 15px;
     padding: 18px 39px;
     width: 176px;
+  }
+}
+
+.page-footer {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 60px 16px 26px 16px;
+}
+@media (min-width: 768px) {
+  .page-footer {
+    padding: 80px 21px 54px 21px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    justify-items: start;
+  }
+  .page-footer::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 177px;
+    top: 80px;
+    left: 50%;
+    background-color: #d7d9df;
+  }
+}
+@media (min-width: 1170px) {
+  .page-footer {
+    padding: 160px 0 74px 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .page-footer::before {
+    display: none;
+  }
+}
+
+.footer-title {
+  margin: 0;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 32px;
+  text-align: center;
+  color: #141517;
+}
+
+.next-trips {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d7d9df;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .next-trips {
+    grid-column: 1/2;
+    border: none;
+  }
+}
+@media (min-width: 1170px) {
+  .next-trips {
+    grid-row: 1/2;
+    align-items: flex-start;
+  }
+  .next-trips::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 189px;
+    left: 350px;
+    height: 189px;
+    background-color: #d7d9df;
+  }
+}
+
+.next-trips__title {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.next-trips__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+.next-trips__item-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.next-trips__item-item {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .next-trips__item-item {
+    justify-content: flex-start;
+  }
+}
+
+.next-trips__item-item-link {
+  color: rgba(20, 21, 23, 0.5);
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.our-contacts {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #d7d9df;
+}
+@media (min-width: 768px) {
+  .our-contacts {
+    grid-column: 2/-1;
+    border-bottom: none;
+    padding: 0;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1170px) {
+  .our-contacts {
+    grid-row: 1/2;
+  }
+}
+
+.our-contacts__title {
+  margin-bottom: 27px;
+}
+
+.our-contacts__link {
+  color: #fe7865;
+  position: relative;
+}
+.our-contacts__link:not(:last-child) {
+  margin-bottom: 24px;
+}
+.our-contacts__link--mail {
+  padding-left: 41px;
+}
+.our-contacts__link--mail::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url("../img/mail-icon.svg") 50% 50% no-repeat;
+}
+.our-contacts__link--tel {
+  padding-left: 33px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.our-contacts__link--tel::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url("../img/phone-grey.svg") 50% 50% no-repeat;
+}
+
+.corporate-trips {
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .corporate-trips {
+    grid-column: 1/-1;
+    border-top: 1px solid #d7d9df;
+  }
+}
+@media (min-width: 1170px) {
+  .corporate-trips {
+    align-items: flex-start;
+    padding: 0;
+    grid-row: 1/2;
+    grid-column: 3/-1;
+    border: none;
+  }
+  .corporate-trips::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 189px;
+    top: 0;
+    right: 430px;
+    background-color: #d7d9df;
+  }
+}
+
+.corporate-trips__text {
+  text-align: center;
+  color: rgba(20, 21, 23, 0.5);
+}
+@media (min-width: 1170px) {
+  .corporate-trips__text {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */

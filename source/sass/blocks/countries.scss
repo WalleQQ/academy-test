@@ -173,6 +173,7 @@
 
 .countries__tab {
   @include list-zeroing;
+  cursor: pointer;
   position: relative;
   padding: 0 16px 10px;
   display: flex;
