@@ -93,7 +93,7 @@
                 />
               </picture>
               <p class="countries__item-country">Греция</p>
-              <a class="countries__item-link">смотреть подробнее</a>
+              <a href="#" class="countries__item-link">смотреть подробнее</a>
             </li>
             <li class="countries__item">
               <picture>
@@ -781,10 +781,16 @@
       </section>
       <section class="our-contacts">
         <h2 class="our-contacts__title footer-title">Наши контакты</h2>
-        <a href="mailto:puteshestviemechta@gmail.ru"
+        <a
+          class="our-contacts__link our-contacts__link--mail"
+          href="mailto:puteshestviemechta@gmail.ru"
           >puteshestviemechta@gmail.ru</a
         >
-        <a href="tel:749978468446">+7 (499) -784-684-46</a>
+        <a
+          class="our-contacts__link our-contacts__link--tel"
+          href="tel:749978468446"
+          >+7 (499) -784-684-46</a
+        >
       </section>
       <section class="corporate-trips">
         <h3 class="corporate-trips__title footer-title">
@@ -797,6 +803,40 @@
         </p>
       </section>
     </footer>
+    <section class="modal">
+      <form
+        class="modal__form send-contacts"
+        action="https://echo.htmlacademy.ru/courses"
+        method="post"
+      >
+        <h2 class="send-contacts__title">Купить тур</h2>
+        <div class="send-contacts__input-wrapper">
+          <label class=".send-contacts__label visually-hidden" for="tel"
+            >Введите номер телефона</label
+          >
+          <input
+            class="send-contacts__input send-contacts__input--tel"
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder="+7 Введите 10 цифр номера"
+          />
+          <label class="visually-hidden" for="email">Введите email</label>
+          <input
+            class="send-contacts__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+          />
+        </div>
+        <input
+          class="send-contacts__button button"
+          type="submit"
+          value="Отправить"
+        />
+      </form>
+    </section>
     <script src="js/menu.js"></script>
     <script src="js/tabs.js"></script>
   </body>
