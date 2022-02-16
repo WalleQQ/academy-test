@@ -164,7 +164,7 @@
     background-color: $basic-extra-light-grey;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     &::after {
       display: none;
     }

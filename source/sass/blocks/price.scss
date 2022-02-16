@@ -1,0 +1,209 @@
+.price {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 16px 50px 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 21px 110px 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 140px 0;
+    display: grid;
+    grid-template-columns: 770px 310px;
+    gap: 90px;
+  }
+}
+
+.price__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+.price__title {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid $basic-light-red;
+  }
+}
+
+.price__description {
+  margin: 0 0 20px 0;
+  color: $basic-light-grey;
+  text-align: center;
+  max-width: 726px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin: 0 0 60px 0;
+    line-height: 170%;
+  }
+}
+
+.price__call-text {
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-family: $font-medium;
+  font-size: 18px;
+  line-height: 34px;
+  color: $basic-black;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 13px 0;
+    align-self: center;
+  }
+}
+
+.price__tel {
+  position: relative;
+  color: $basic-light-red;
+  margin: 0 0 40px 0;
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+    margin: 0;
+    color: $basic-dark-black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+      background: url("../img/phone-red.svg") 50% 50% no-repeat;
+    }
+  }
+}
+
+.price__program-list {
+  @include list-zeroing;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+  }
+}
+
+.price__program-item {
+  position: relative;
+  background-color: $basic-white;
+  border: 3px solid $basic-light-red;
+  box-sizing: border-box;
+  border-radius: 6px 6px 0 0;
+  height: 690px;
+  width: 288px;
+  padding: 30px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--econom {
+    border: 1px solid $basic-extra-light-grey;
+    border-bottom: 3px solid $basic-light-red;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 30px 30px 30px;
+    height: 672px;
+    width: 370px;
+    border-radius: 6px;
+
+    &--econom {
+      border: 1px solid $basic-extra-light-grey;
+    }
+  }
+}
+
+.price__program-item-heading,
+.price__program-item-price {
+  margin: 0 0 10px 0;
+  font-family: $font-bold;
+  font-size: 24px;
+  line-height: 34px;
+  color: $basic-light-red;
+
+  &--econom {
+    color: $special-price-grey;
+  }
+}
+
+.price__program-item-text {
+  margin: 0 0 20px 0;
+  padding: 0 0 10px 0;
+  text-align: center;
+  border-bottom: 1px solid $basic-light-red;
+
+  &--econom {
+    border-bottom: 1px solid $basic-extra-light-grey;
+  }
+}
+
+.price__program-item-description-list {
+  @include list-zeroing;
+}
+
+.price__program-item-description-item {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 0;
+    top: 0;
+    background: url("../img/price-icon.svg") 50% 50% no-repeat;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--econom::before {
+    background: url("../../img/price-icon-red.svg") 50% 50% no-repeat;
+  }
+}
+
+.price__program-item-button {
+  width: 288px;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 19px 71px;
+  position: absolute;
+  bottom: 0;
+
+  @media (min-width: $desktop-width) {
+    bottom: 30px;
+  }
+}
