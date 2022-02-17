@@ -1,5 +1,6 @@
 .questions {
   background-color: $menu-grey-2;
+  position: relative;
   padding: 50px 16px;
 
   @media (min-width: $tablet-width) {
@@ -33,6 +34,14 @@
     );
     background-position: 0 50%;
     background-size: contain;
+  }
+}
+
+.question__close-button {
+  display: none;
+
+  &--show {
+    display: block;
   }
 }
 

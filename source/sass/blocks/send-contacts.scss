@@ -14,6 +14,7 @@
 }
 
 .send-contacts__input {
+  box-sizing: border-box;
   position: relative;
   padding: 16px 15px 15px 26px;
   align-self: stretch;
@@ -42,5 +43,34 @@
     line-height: 15px;
     padding: 18px 39px;
     width: 176px;
+  }
+}
+
+.send-contacts__close-button {
+  cursor: pointer;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+}
+
+.send-contacts__close-button-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 22px;
+  background-color: $close-menu-grey;
+  transform: rotate(45deg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    background-color: $close-menu-grey;
+    transform: rotate(90deg);
   }
 }
