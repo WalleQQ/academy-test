@@ -5,6 +5,7 @@ const successForm = document.querySelector(".success");
 const errorForm = document.querySelector(".error");
 const successCloseButton = document.querySelector(".success__button");
 const errorCloseButton = document.querySelector(".error__button");
+const modalContainer = document.querySelector(".modal");
 
 const isEscapeKey = (evt) => evt.key === "Escape";
 
@@ -53,13 +54,17 @@ sendContactsForm.forEach((item) => {
     })
       .then((response) => {
         if (response.ok) {
+          modalContainer.classList.remove("modal--show");
           successForm.classList.add("success--show");
           document.addEventListener("keydown", onShowResultEscKeydown);
         } else {
+          modalContainer.classList.remove("modal--show");
           errorForm.classList.add("error--show");
+          document.addEventListener("keydown", onShowResultEscKeydown);
         }
       })
       .catch(() => {
+        modalContainer.classList.remove("modal--show");
         errorForm.classList.add("error--show");
         document.addEventListener("keydown", onShowResultEscKeydown);
       });
