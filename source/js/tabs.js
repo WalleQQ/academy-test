@@ -2,6 +2,14 @@ const tabs = document.querySelectorAll(".countries__tab-link");
 const tabContent = document.querySelectorAll(".countries__tab-item");
 const linkToTab = document.querySelectorAll(".countries__item-link");
 
+linkToTab.forEach((link, i) => {
+  link.addEventListener("click", () => {
+    hideTab();
+    tabs[i].classList.add("countries__tab-link--current");
+    tabContent[i].classList.add("countries__tab-item--current");
+  });
+});
+
 tabs.forEach((tab, i) => {
   tab.addEventListener("click", () => {
     hideTab();

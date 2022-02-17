@@ -1503,6 +1503,7 @@ img {
 
 .questions {
   background-color: #fbf8f8;
+  position: relative;
   padding: 50px 16px;
 }
 @media (min-width: 768px) {
@@ -1531,6 +1532,13 @@ img {
     background-position: 0 50%;
     background-size: contain;
   }
+}
+
+.question__close-button {
+  display: none;
+}
+.question__close-button--show {
+  display: block;
 }
 
 .questions__form {
@@ -1632,6 +1640,7 @@ img {
 }
 
 .send-contacts__input {
+  box-sizing: border-box;
   position: relative;
   padding: 16px 15px 15px 26px;
   align-self: stretch;
@@ -1662,6 +1671,34 @@ img {
     padding: 18px 39px;
     width: 176px;
   }
+}
+
+.send-contacts__close-button {
+  cursor: pointer;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+}
+
+.send-contacts__close-button-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(20, 21, 23, 0.2);
+  transform: rotate(45deg);
+}
+.send-contacts__close-button-item::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(20, 21, 23, 0.2);
+  transform: rotate(90deg);
 }
 
 .page-footer {
@@ -1880,5 +1917,153 @@ img {
   .corporate-trips__text {
     text-align: left;
   }
+}
+
+.modal {
+  display: none;
+}
+.modal--show {
+  display: block;
+}
+
+.modal__wrapper {
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 100px 16px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .modal__wrapper {
+    width: 720px;
+    padding: 72px 60px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fbf8f8;
+    background-image: -webkit-image-set(url("../img/modal-image.jpg") 1x, url("../img/modal-image@2x.jpg") 2x, url("../img/modal-image.webp") 1x, url("../img/modal-image@2x.webp") 2x);
+    background-image: image-set(url("../img/modal-image.jpg") 1x, url("../img/modal-image@2x.jpg") 2x, url("../img/modal-image.webp") 1x, url("../img/modal-image@2x.webp") 2x);
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .modal__form {
+    align-items: center;
+    width: 267px;
+  }
+}
+
+.modal .send-contacts__title {
+  margin-bottom: 50px;
+}
+
+.modal .send-contacts__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal .send-contacts__input {
+  width: 288px;
+  margin-bottom: 20px;
+}
+
+.modal .send-contacts__button {
+  padding: 19px 103px;
+  width: 288px;
+  font-size: 10px;
+  line-height: 12px;
+}
+@media (min-width: 768px) {
+  .modal .send-contacts__button {
+    padding: 18px 37px;
+    width: 174px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.success,
+.error {
+  display: none;
+}
+.success--show,
+.error--show {
+  display: block;
+}
+
+.success__inner,
+.error__inner {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 320px;
+  height: 568px;
+  background-color: #fbf8f8;
+  box-sizing: border-box;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .success__inner,
+.error__inner {
+    width: 720px;
+    height: 444px;
+  }
+}
+
+.success__title,
+.error__title {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Montserrat-Medium", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 170%;
+  color: #48494d;
+  text-align: center;
+}
+
+.success__button,
+.error__button {
+  cursor: pointer;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+}
+
+.success__button-item,
+.error__button-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(20, 21, 23, 0.2);
+  transform: rotate(45deg);
+}
+.success__button-item::before,
+.error__button-item::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(20, 21, 23, 0.2);
+  transform: rotate(90deg);
 }
 /*# sourceMappingURL=style.css.map */
